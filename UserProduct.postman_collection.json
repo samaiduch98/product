@@ -1,0 +1,487 @@
+{
+	"info": {
+		"_postman_id": "940dfda0-c889-4cf8-a45c-f112708ee6b8",
+		"name": "UserProduct",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"test@gmail.com\",\r\n    \"password\":\"12345\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3010/login",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3010",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "viewDatail",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJJRCI6NCwidXNlcm5hbWUiOiJ0ZXN0IiwiZW1haWwiOiJ0ZXN0QGdhbWlsLmNvbSIsInBhc3N3b3JkIjoiJDJiJDEwJGZsak5CeTBzS0h6RndjbjBQUFA2TGVFb3AucVJMQzB3T3JVRUlFcXhOWmVweDNTZFY4NHNtIn0sImlhdCI6MTY1MTI4OTgxOH0.Sgf-OObtKaz99ImxCHW2m3pwCL0NORRqxuYFBPoNPSU",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3010/users/2",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3010",
+							"path": [
+								"users",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJJRCI6NCwidXNlcm5hbWUiOiJ0ZXN0IiwiZW1haWwiOiJ0ZXN0QGdhbWlsLmNvbSIsInBhc3N3b3JkIjoiJDJiJDEwJGZsak5CeTBzS0h6RndjbjBQUFA2TGVFb3AucVJMQzB3T3JVRUlFcXhOWmVweDNTZFY4NHNtIn0sImlhdCI6MTY1MTI4OTgxOH0.Sgf-OObtKaz99ImxCHW2m3pwCL0NORRqxuYFBPoNPSU",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Thevy\",\r\n    \"password\":\"12345\",\r\n    \"email\":\"thevy@gamil.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3010/users/register",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3010",
+							"path": [
+								"users",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJJRCI6NCwidXNlcm5hbWUiOiJ0ZXN0IiwiZW1haWwiOiJ0ZXN0QGdhbWlsLmNvbSIsInBhc3N3b3JkIjoiJDJiJDEwJGZsak5CeTBzS0h6RndjbjBQUFA2TGVFb3AucVJMQzB3T3JVRUlFcXhOWmVweDNTZFY4NHNtIn0sImlhdCI6MTY1MTI4OTgxOH0.Sgf-OObtKaz99ImxCHW2m3pwCL0NORRqxuYFBPoNPSU",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3010/users/delete",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3010",
+							"path": [
+								"users",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJJRCI6NCwidXNlcm5hbWUiOiJ0ZXN0IiwiZW1haWwiOiJ0ZXN0QGdhbWlsLmNvbSIsInBhc3N3b3JkIjoiJDJiJDEwJGZsak5CeTBzS0h6RndjbjBQUFA2TGVFb3AucVJMQzB3T3JVRUlFcXhOWmVweDNTZFY4NHNtIn0sImlhdCI6MTY1MTI4OTgxOH0.Sgf-OObtKaz99ImxCHW2m3pwCL0NORRqxuYFBPoNPSU",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{   \"id\":5,\r\n    \"name\":\"Theavy Chan\",\r\n    \"password\":\"123455\",\r\n    \"email\":\"theavy@gamil.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3010/users/update",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3010",
+							"path": [
+								"users",
+								"update"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "products",
+			"item": []
+		},
+		{
+			"name": "insert",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJJRCI6MiwidXNlcm5hbWUiOiIiLCJlbWFpbCI6ImRlbW9AZ21haWwuY29tIiwicGFzc3dvcmQiOiIxMjM0NSJ9LCJpYXQiOjE2NTEyODEyMjh9.N7onVWAIUQ0vX1RWOsA5DXMy2HGbUAOVB6bRgprxZgA",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "multipart/form-data",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "imageFile",
+							"type": "file",
+							"src": "/C:/Users/vanna mok/Desktop/sell-your-product-online.jpg"
+						},
+						{
+							"key": "price",
+							"value": "11",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "clothes",
+							"type": "text"
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3010/products/insert",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3010",
+					"path": [
+						"products",
+						"insert"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "list",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJJRCI6NCwidXNlcm5hbWUiOiJ0ZXN0IiwiZW1haWwiOiJ0ZXN0QGdhbWlsLmNvbSIsInBhc3N3b3JkIjoiJDJiJDEwJGZsak5CeTBzS0h6RndjbjBQUFA2TGVFb3AucVJMQzB3T3JVRUlFcXhOWmVweDNTZFY4NHNtIn0sImlhdCI6MTY1MTI4OTgxOH0.Sgf-OObtKaz99ImxCHW2m3pwCL0NORRqxuYFBPoNPSU",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3010/products/list",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3010",
+					"path": [
+						"products",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "viewDetail",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJJRCI6MiwidXNlcm5hbWUiOiIiLCJlbWFpbCI6ImRlbW9AZ21haWwuY29tIiwicGFzc3dvcmQiOiIxMjM0NSJ9LCJpYXQiOjE2NTEyODEyMjh9.N7onVWAIUQ0vX1RWOsA5DXMy2HGbUAOVB6bRgprxZgA",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3010/products/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3010",
+					"path": [
+						"products",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJJRCI6MiwidXNlcm5hbWUiOiIiLCJlbWFpbCI6ImRlbW9AZ21haWwuY29tIiwicGFzc3dvcmQiOiIxMjM0NSJ9LCJpYXQiOjE2NTEyODEyMjh9.N7onVWAIUQ0vX1RWOsA5DXMy2HGbUAOVB6bRgprxZgA",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "fileName",
+							"value": "images1651281836691sell-your-product-online.jpg",
+							"type": "text"
+						},
+						{
+							"key": "imageFile",
+							"type": "file",
+							"src": "/C:/Users/vanna mok/Desktop/photo_2022-04-04_08-49-57.jpg"
+						},
+						{
+							"key": "name",
+							"value": "clothes",
+							"type": "text"
+						},
+						{
+							"key": "price",
+							"value": "15",
+							"type": "text"
+						},
+						{
+							"key": "id",
+							"value": "2",
+							"type": "text"
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3010/products/update",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3010",
+					"path": [
+						"products",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJJRCI6MiwidXNlcm5hbWUiOiIiLCJlbWFpbCI6ImRlbW9AZ21haWwuY29tIiwicGFzc3dvcmQiOiIxMjM0NSJ9LCJpYXQiOjE2NTEyODEyMjh9.N7onVWAIUQ0vX1RWOsA5DXMy2HGbUAOVB6bRgprxZgA",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"fileName\":\"images1651283078512photo_2022-04-04_08-49-57.jpg\",\r\n    \"id\":1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3010/products/delete",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3010",
+					"path": [
+						"products",
+						"delete"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
